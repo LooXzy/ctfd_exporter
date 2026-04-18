@@ -1,6 +1,6 @@
 services:
   ctfd_exporter:
-    build: .
+    image: ghcr.io/looxzy/ctfd_exporter:latest
     container_name: ctfd_exporter
     ports:
       - "8000:8000"
