@@ -3,19 +3,18 @@
 Un exporteur Prometheus écrit en Python pour récupérer les statistiques depuis l'API de CTFd.
 
 ## Installation
-1. Créez un fichier `.env` en vous basant sur le `.env.example` :
-   ```bash
-   cp .env.example .env
-   ```
+1. Créez un fichier `.env` en vous basant sur le `.env.example` du repo.
 
 2. Éditez le fichier `.env` :
    - `CTFD_URL` : L'URL racine de votre instance CTFd.
    - `CTFD_TOKEN` : Un token d'accès administrateur de CTFd.
    - `POLL_INTERVAL` : Temps d'attente (en secondes) entre deux requêtes successives de scrapping vers l'API. (Par défaut : 30).
 
+3. Créez un fichier `docker-compose.yml` en vous basant sur le `docker-compose.yml` du repo.
+
 3. Déployez l'application via Docker Compose avec la commande suivante :
     ```bash
-    docker-compose up -d --build
+    docker-compose up -d
     ```
     L'exporteur sera accessible à l'adresse suivante : `http://localhost:8000/metrics`.
 
