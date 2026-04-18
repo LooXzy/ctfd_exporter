@@ -1,0 +1,4 @@
+Dockerfile*
+*.env
+README.md
+docker-compose.yml
