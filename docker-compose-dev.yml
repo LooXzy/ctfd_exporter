@@ -1,0 +1,9 @@
+services:
+  ctfd_exporter:
+    build: .
+    container_name: ctfd_exporter
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    env_file:
+      - .env
