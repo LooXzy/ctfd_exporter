@@ -3,23 +3,10 @@
   "kind": "Dashboard",
   "metadata": {
     "name": "defxp92014k5cb",
-    "namespace": "default",
-    "uid": "c64f0798-4c3d-4cca-8677-ba5e53bde46c",
-    "resourceVersion": "1781381911717982",
     "generation": 103,
     "creationTimestamp": "2026-04-17T15:04:53Z",
-    "labels": {
-      "grafana.app/deprecatedInternalID": "522319150948352"
-    },
-    "annotations": {
-      "grafana.app/createdBy": "user:bfj62nkxvqo74d",
-      "grafana.app/folder": "ffkoi3y8jyqyof",
-      "grafana.app/saved-from-ui": "Grafana v13.0.0 (e9de482b)",
-      "grafana.app/updatedBy": "user:bfj62nkxvqo74d",
-      "grafana.app/updatedTimestamp": "2026-06-13T20:18:31Z",
-      "grafana.app/folderTitle": "POC HTS - HackTheShields",
-      "grafana.app/folderUrl": "/dashboards/f/ffkoi3y8jyqyof/poc-hts-hacktheshields"
-    }
+    "labels": {},
+    "annotations": {}
   },
   "spec": {
     "annotations": [
@@ -30,10 +17,10 @@
             "kind": "DataQuery",
             "group": "grafana",
             "version": "v0",
-            "datasource": {
-              "name": "-- Grafana --"
-            },
-            "spec": {}
+            "spec": {},
+            "labels": {
+              "grafana.app/export-label": "grafana-1"
+            }
           },
           "enable": true,
           "hide": true,
@@ -64,9 +51,6 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "exemplar": false,
@@ -75,6 +59,9 @@
                         "instant": true,
                         "legendFormat": "__auto",
                         "range": false
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -198,9 +185,6 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "exemplar": false,
@@ -209,6 +193,9 @@
                         "instant": true,
                         "legendFormat": "__auto",
                         "range": false
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -331,9 +318,6 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "exemplar": false,
@@ -342,6 +326,9 @@
                         "instant": true,
                         "legendFormat": "__auto",
                         "range": false
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -456,9 +443,6 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "exemplar": false,
@@ -466,6 +450,9 @@
                         "instant": true,
                         "legendFormat": "__auto",
                         "range": false
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -538,9 +525,6 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "exemplar": false,
@@ -548,6 +532,9 @@
                         "instant": true,
                         "legendFormat": "__auto",
                         "range": false
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -624,9 +611,6 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "exemplar": false,
@@ -635,6 +619,9 @@
                         "instant": true,
                         "legendFormat": "__auto",
                         "range": false
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -755,14 +742,14 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "expr": "topk(50, sum(ctfd_submissions_detailed{type=\"incorrect\"}) by (team_name))",
                         "legendFormat": "__auto",
                         "range": true
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -873,15 +860,15 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "expr": "sum(ctfd_submission_fails) by (category)",
                         "instant": false,
                         "legendFormat": "__auto",
                         "range": true
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -961,9 +948,6 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "exemplar": false,
@@ -971,6 +955,9 @@
                         "instant": true,
                         "legendFormat": "__auto",
                         "range": false
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -1047,9 +1034,6 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "exemplar": false,
@@ -1057,6 +1041,9 @@
                         "instant": true,
                         "legendFormat": "__auto",
                         "range": true
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -1170,14 +1157,14 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "expr": "topk(50, sum(ctfd_submissions_detailed{type=\"correct\"}) by (team_name))",
                         "legendFormat": "__auto",
                         "range": true
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -1288,9 +1275,6 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "exemplar": false,
@@ -1299,6 +1283,9 @@
                         "instant": true,
                         "legendFormat": "__auto",
                         "range": false
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -1421,14 +1408,14 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "expr": "topk(50, sum(ctfd_submissions_detailed{type=\"incorrect\"}) by (user_name))",
                         "legendFormat": "__auto",
                         "range": true
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -1539,14 +1526,14 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "expr": "topk(50, sum(ctfd_submissions_detailed{type=\"correct\"}) by (user_name))",
                         "legendFormat": "__auto",
                         "range": true
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -1657,15 +1644,15 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "expr": "topk(10, sum by(team_name) (ctfd_submissions_detailed{type=\"incorrect\"}))",
                         "instant": false,
                         "legendFormat": "__auto",
                         "range": true
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -1745,15 +1732,15 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "expr": "topk(10, sum by(user_name) (ctfd_submissions_detailed{type=\"incorrect\"}))",
                         "instant": false,
                         "legendFormat": "__auto",
                         "range": true
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -1833,15 +1820,15 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "expr": "topk(5, sum by(user_name) (ctfd_user_score))",
                         "instant": false,
                         "legendFormat": "__auto",
                         "range": true
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -1921,15 +1908,15 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "expr": "topk(5, sum by(team_name) (ctfd_team_score))",
                         "instant": false,
                         "legendFormat": "__auto",
                         "range": true
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -2009,15 +1996,15 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "expr": "sum(ctfd_submission_solves) by (category)",
                         "instant": false,
                         "legendFormat": "__auto",
                         "range": true
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -2097,9 +2084,6 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "exemplar": false,
@@ -2108,6 +2092,9 @@
                         "instant": true,
                         "legendFormat": "__auto",
                         "range": false
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -2310,9 +2297,6 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "exemplar": false,
@@ -2321,6 +2305,9 @@
                         "instant": true,
                         "legendFormat": "__auto",
                         "range": false
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -2454,9 +2441,6 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "exemplar": false,
@@ -2464,6 +2448,9 @@
                         "instant": true,
                         "legendFormat": "__auto",
                         "range": false
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
@@ -2536,9 +2523,6 @@
                       "kind": "DataQuery",
                       "group": "prometheus",
                       "version": "v0",
-                      "datasource": {
-                        "name": "afj62yv0g06bkd"
-                      },
                       "spec": {
                         "editorMode": "code",
                         "exemplar": false,
@@ -2546,6 +2530,9 @@
                         "instant": true,
                         "legendFormat": "__auto",
                         "range": false
+                      },
+                      "labels": {
+                        "grafana.app/export-label": "prometheus-1"
                       }
                     },
                     "refId": "A",
