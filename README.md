@@ -12,11 +12,12 @@ Un exporteur Prometheus écrit en Python pour récupérer les statistiques depui
 
 3. Créez un fichier `docker-compose.yml` en vous basant sur le `docker-compose.yml` du repo.
 
-3. Déployez l'application via Docker Compose avec la commande suivante :
+4. Déployez l'application via Docker Compose avec la commande suivante :
     ```bash
     docker-compose up -d
     ```
     L'exporteur sera accessible à l'adresse suivante : `http://localhost:8000/metrics`.
+5. Le fichier `dashboard.json` présent dans le repo peut être importé dans Grafana pour créer le tableau de bord correspondant.
 
 ## Intégration Prometheus
 Ajoutez la cible dans votre configuration `prometheus.yml` :
